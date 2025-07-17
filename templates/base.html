@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Mohit Portfolio</title>
+      <!-- Font Awesome -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+         />
+      <!-- Google Fonts -->
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter&family=Rubik:wght@300..900&display=swap"
+         rel="stylesheet"
+         />
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+      {% block extra_head %}{% endblock %}
+   </head>
+   <body>
+      <!-- Navbar -->
+      <nav class="nav-content">
+         <h1 class="gradient-text">Mohit</h1>
+         <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates-section">Certificates</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+         </div>
+      </nav>
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+      <i class="fas fa-moon"></i>
+      </button>
+      <!-- Page Content -->
+      {% block content %}{% endblock %}
+      <!-- JS -->
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      {% block extra_js %}{% endblock %}
+      <script type="module">
+         import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+         new DotLottie({
+           autoplay: true,
+           loop: true,
+           canvas: document.getElementById("dotlottie-canvas"),
+           src: "https://lottie.host/937966d7-359b-4263-952a-e2af80efe271/8R7p7ojpK7.lottie",
+         });
+      </script>
+   </body>
+</html>

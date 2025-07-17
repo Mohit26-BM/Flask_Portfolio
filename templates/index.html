@@ -1,0 +1,405 @@
+{% extends "base.html" %}
+{% block title %}Home | Mohit - Portfolio{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+   <div class="hero-flex container">
+      <!-- Left: Text content -->
+      <div class="hero-content">
+         <h1>Hello, I'm Mohit</h1>
+         <p class="typed-line">
+            I'm a <span id="typing-text" class="typing"></span> Enthusiast.
+         </p>
+         <div class="social-links">
+            <a href="https://www.linkedin.com/in/mohit26bali/" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Mohit26-BM" target="_blank" rel="noopener" class="social-btn" aria-label="GitHub Profile" title="GitHub Profile">
+            <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:m26ohitbali@gmail.com" rel="noopener" class="social-btn" aria-label="Email Mohit" title="Email Mohit">
+            <i class="fas fa-envelope"></i>
+            </a>
+         </div>
+      </div>
+      <!-- Right: Lottie Animation -->
+      <div class="hero-animation tilt-effect">
+         <canvas id="dotlottie-canvas" width="400" height="400"></canvas>
+      </div>
+   </div>
+</section>
+<!-- About Section -->
+<section id="about">
+<!-- About Me Section -->
+<section class="container">
+   <h2 class="section-title">About Me</h2>
+   <div class="card-grid">
+      <div class="card">
+         <h3><i class="fas fa-user"></i> Introduction</h3>
+         <p>
+            I'm Mohit, a B.Tech Computer Science and Engineering student at
+            Lovely Professional University, Punjab. Passionate about Data
+            Science, I excel at uncovering patterns and building data-driven
+            solutions.
+         </p>
+         <p>
+            <strong>Aspiring Data Analyst:</strong> I transform data into
+            insights using tools like Tableau, SQL, Python, & data analysis
+            workflows. I'm passionate about leveraging technology to derive
+            insights and drive impactful decision-making.<br />
+            <strong>Culturally Curious:</strong> My love for cultures extends
+            to languages and been learning languages on Duolingo and on Udemy,
+            which has been a rewarding journey into new ways of thinking.<br />
+            <strong>Avid Reader:</strong> I explore historical narratives and
+            scientific mysteries through books on global conflicts and
+            cosmology.
+         </p>
+         <div class="contact-info">
+            <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+            <p><i class="fas fa-envelope"></i> m26ohitbali@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91-8799773685</p>
+            <p><i class="fas fa-map-marker-alt"></i> Faridabad, Haryana</p>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Certificates Section -->
+<section id="skills" style="background-color: var(--bg)">
+   <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+         <!-- Programming & Scripting Languages -->
+         <div class="skill-category">
+            <h3><i class="fas fa-code"></i> Languages</h3>
+            <ul class="skill-list">
+               <li>Python</li>
+               <li>C++</li>
+               <li>R</li>
+               <li>SQL</li>
+               <li>HTML</li>
+               <li>JavaScript</li>
+            </ul>
+         </div>
+         <!-- Data Analysis & BI -->
+         <div class="skill-category">
+            <h3><i class="fas fa-chart-bar"></i>Analytical Toolkit</h3>
+            <ul class="skill-list">
+               <li>Tableau</li>
+               <li>Power BI</li>
+               <li>Excel</li>
+               <li>MySQL</li>
+               <li>PostgreSQL</li>
+               <li>R-Studio</li>
+            </ul>
+         </div>
+         <!-- Frameworks & Libraries -->
+         <div class="skill-category">
+            <h3><i class="fas fa-layer-group"></i>Libraries</h3>
+            <ul class="skill-list">
+               <li>NumPy</li>
+               <li>Pandas</li>
+               <li>Scikit-learn</li>
+               <li>Matplotlib</li>
+               <li>Plotly</li>
+               <li>Ggplot2</li>
+            </ul>
+         </div>
+         <!-- Tools -->
+         <div class="skill-category">
+            <h3><i class="fas fa-tools"></i>Cloud & ETL Tools</h3>
+            <ul class="skill-list">
+               <li>AWS</li>
+               <li>Git</li>
+               <li>RapidMiner</li>
+               <li>Informatica</li>
+            </ul>
+         </div>
+      </div>
+   </div>
+</section>
+<section id="projects">
+   <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="card-grid">
+         <!-- Project 1 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/summers.png') }}" alt="Suicides" />
+            <h3>Summers in India (2012–2021)</h3>
+            <p class="project-tech">Tableau, PostgreSQL | Mar–Apr 2025</p>
+            <p>
+               <strong>About: </strong>
+               Analyzed weather across 15 Indian cities using Tableau +
+               PostgreSQL. Key KPIs were average temperatures, wind speed,
+               humidity across the cities
+               <br />
+               <strong>Key Insights: </strong>Kolkata and Mumbai had the highest
+               humidity; Ahmedabad and Hyderabad recorded highest average
+               temperatures.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/India-Summer-Weather-Analysis.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+         <!-- Project 2 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/omnifood.png') }}" alt="Suicides" />
+            <h3>Omnifood: AI-based Meal Plan</h3>
+            <p class="project-tech">HTML, CSS, JavaScript | Mar–Apr 2025</p>
+            <p>
+               <strong>About:</strong> Created a responsive homepage for a
+               healthy food delivery platform with a focus on UX/UI. Interactive
+               elements like sticky navigation, smooth scrolling, and hover
+               effects enhance the user experience.
+               <br />
+               <strong>Key Insights:</strong> Lighthouse Audit – Accessibility:
+               92, Best Practices: 100, SEO: 100.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/Omnifood-Website.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+         <!-- Project 3 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/air.png') }}" alt="Suicides" />
+            <h3>Air Quality in Asia 2023</h3>
+            <p class="project-tech">Tableau, Tableau Prep | Nov–Dec 2024</p>
+            <p>
+               <strong>About:</strong>
+               Developed an interactive dashboard visualizing city and
+               country-wise PM2.5 pollution trends across 2,164 cities in 40+
+               countries, allowing users to explore pollution levels and identify
+               high-risk regions
+               <br />
+               <strong>Key Insights:</strong>
+               India accounted for 42 of 50 most polluted cities; Delhi ranked
+               worst capital globally.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/Air-Quality-in-Asia-2023.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+         <!-- Project 4 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/happiness.jpg') }}" alt="Suicides" />
+            <h3>ML-Driven Happiness Analysis</h3>
+            <p class="project-tech">R, ggplot2, Plotly, Shiny | Oct–Nov 2024</p>
+            <p>
+               <strong>About:</strong> Developed a Shiny dashboard in R to
+               compare <span class="hover-text">ML models</span> on the World
+               Happiness Report. Countries were grouped into happiness levels,
+               and the dashboard visualizes model performance using confusion
+               matrices, bar charts, and regression plots.
+               <br />
+               <strong>Key Insights:</strong> Naive Bayes achieved the best
+               results with 89.1% accuracy, 88.4% recall, 86.1% precision, and an
+               F1 score of 86.8%.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/World-Happiness-Report-R.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+         <!-- Project 5 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/nqueens.png') }}" alt="Suicides" />
+            <h3>N-Queens Visualizer</h3>
+            <p class="project-tech">HTML, CSS, JavaScript | Jul–Aug 2024</p>
+            <p>
+               <strong>About: </strong>
+               A fully interactive & animated visualizer for the classic N-Queens
+               Problem, built using HTML, CSS, and JavaScript to observe the
+               step-by-step backtracking solution of the N-Queens puzzle on a
+               chessboard, enhanced with a modern UI and interactive controls.
+               <br />
+               <strong>Key Insights:</strong>
+               Demonstrates understanding of backtracking algorithms and
+               recursive problem-solving.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/N-Queens-Visualizer.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+         <!-- Project 6 -->
+         <div class="project-card">
+            <img src="{{ url_for('static', filename='images/suicides.png') }}" alt="Suicides" />
+            <h3>Suicides in India (2001–2012)</h3>
+            <p class="project-tech">Microsoft Excel | Mar–Apr 2024</p>
+            <p>
+               <strong>About: </strong>
+               Developed an interactive dashboard using pivot charts and slicers.
+               It highlights key insights on suicide demographics and trends by
+               education, age, and gender.
+               <br />
+               <strong>Key Insights:</strong>
+               The highest suicides were among age group 15–44, with males
+               accounting for 56% of cases. Married individuals made 70% of
+               suicides, and those with primary & middle school education made
+               50% of cases.
+            </p>
+            <a
+               class="github-button"
+               href="https://github.com/Mohit26-BM/Suicides-in-India-2001-2012-.git"
+               target="_blank" rel="noopener"
+               >View on GitHub</a
+               >
+         </div>
+      </div>
+   </div>
+</section>
+<section id="certificates-section" class="certificates-section">
+   <div class="container">
+      <h2 class="section-title">Certificates</h2>
+      <div class="card-grid">
+         <div class="card">
+            <h3>Python for Data Science, AI & Development</h3>
+            <p><strong>IBM (Coursera) • April 2025</strong></p>
+            <p>Used data structures, functions, Pandas, NumPy, APIs, and web scraping with BeautifulSoup.</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/ERGYPPDL5D57" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>AWS Cloud Computing</h3>
+            <p><strong>Cipher Schools • February 2025</strong></p>
+            <p>Worked with Lambda, Auto Scaling, Load Balancers. Built scalable serverless apps.</p>
+            <a href="https://cipher-other-assets.s3.ap-south-1.amazonaws.com/certificates/TC_mbmohyal54548%40gmail.com_CS2024-10419" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>Data Analysis with Tableau</h3>
+            <p><strong>Coursera • December 2024</strong></p>
+            <p>Created visualizations and dashboards, applied EDA, and automated analytics in Tableau.</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/7MVTNKK1NVKH" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>Supervised Machine Learning</h3>
+            <p><strong>DeepLearning.AI • December 2024</strong></p>
+            <p>Built ML models using scikit-learn. Applied regression and classification techniques.</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/08M3ASPIX9VZ" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>Cloud Computing</h3>
+            <p><strong>NPTEL – IIT Kharagpur • October 2024</strong></p>
+            <p>Covered virtualization, service models, load balancing, security, and cloud architecture.</p>
+            <a href="#" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>DSA – Self-Paced</h3>
+            <p><strong>GeeksforGeeks • August 2024</strong></p>
+            <p>Hands-on coding with DSA concepts and algorithmic techniques.</p>
+            <a href="https://media.geeksforgeeks.org/courses/certificates/293f28c976216b8c7964e275ad5d3e48.pdf" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>Excel for Data Analytics</h3>
+            <p><strong>Macquarie University • May 2024</strong></p>
+            <p>Data cleaning, dashboards, Power Query, and visual analytics using Excel.</p>
+            <a href="https://www.coursera.org/account/accomplishments/specialization/83RFMEUW4YMF" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>R Programming</h3>
+            <p><strong>John Hopkins University • May 2024</strong></p>
+            <p>Gained hands-on experience with data manipulation, statistical computing, and data visualization using R.</p>
+            <a href="https://www.coursera.org/account/accomplishments/certificate/LVLJREM287UB" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+         <div class="card">
+            <h3>Prompt Engineering for ChatGPT</h3>
+            <p><strong>Vanderbilt University • March 2024</strong></p>
+            <p>Crafted effective prompts for LLMs. Built ChatGPT-powered use cases.</p>
+            <a href="https://www.coursera.org/account/accomplishments/verify/U3ZZ9M6HJ3JU" class="view-btn" target="_blank" rel="noopener">View Certificate</a>
+         </div>
+      </div>
+   </div>
+</section>
+<section id="education" style="background-color: var(--bg)">
+   <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-card">
+         <h3>
+            <i class="fas fa-university"></i> Lovely Professional University
+         </h3>
+         <p><i class="fas fa-map-marker-alt"></i> Jalandhar, Punjab</p>
+         <p>
+            <i class="fas fa-graduation-cap"></i> Bachelor of Technology -
+            Computer Science and Engineering
+         </p>
+         <p><i class="fas fa-calendar"></i> Aug 2022 – Present</p>
+         <p><i class="fas fa-star"></i> CGPA: 7.58</p>
+      </div>
+      <div class="education-card">
+         <h3>
+            <i class="fas fa-school"></i> Blue Bird Senior Secondary School
+         </h3>
+         <p><i class="fas fa-map-marker-alt"></i> Faridabad, Haryana</p>
+         <p>
+            <i class="fas fa-graduation-cap"></i> Senior Secondary (XII) –
+            Science (PCM)
+         </p>
+         <p><i class="fas fa-calendar"></i> May 2019 – July 2020</p>
+         <p><i class="fas fa-star"></i> Percentage: 76.8%</p>
+      </div>
+      <div class="education-card">
+         <h3><i class="fas fa-school"></i> Shri Guru Teg Bahadur School</h3>
+         <p><i class="fas fa-map-marker-alt"></i> Faridabad, Haryana</p>
+         <p><i class="fas fa-graduation-cap"></i> Senior Secondary (X)</p>
+         <p><i class="fas fa-calendar"></i> May 2017 – July 2018</p>
+         <p><i class="fas fa-star"></i> Percentage: 85.6%</p>
+      </div>
+   </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+   <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-card">
+         <h3><i class="fas fa-envelope"></i> Connect with Me</h3>
+         <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form"
+            >
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="e98bec84-ca81-408e-99cb-aa6c6d3e3210" />
+            <!-- Optional Metadata -->
+            <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+            <input type="hidden" name="subject" value="New Contact from Portfolio" />
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
+            <div class="form-group">
+               <label for="full-name"><i class="fas fa-user"></i> Full Name</label>
+               <input id="full-name" type="text" name="name" required placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+               <label for="email"><i class="fas fa-envelope"></i> Email</label>
+               <input id="email" type="email" name="email" required placeholder="me@example.com" />
+            </div>
+            <div class="form-group">
+               <label for="purpose"><i class="fas fa-handshake"></i> Purpose</label>
+               <select id="purpose" name="subject" required>
+                  <option value="">Choose an option</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Hiring Opportunity">Hiring Opportunity</option>
+                  <option value="Feedback">Feedback on Portfolio</option>
+                  <option value="Project Inquiry">Project Inquiry</option>
+                  <option value="Other">Other</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="message"><i class="fas fa-comment"></i> Message</label>
+               <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--form">Send Message</button>
+         </form>
+      </div>
+   </div>
+</section>
+{% endblock %}
